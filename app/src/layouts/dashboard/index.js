@@ -53,7 +53,7 @@ import TodayIcon from '@mui/icons-material/Today';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import HourglassFullIcon from '@mui/icons-material/HourglassFull';
 import Weather from "./components/wherether/index"
-import ResponsiveSpacing from "./components/images/index"
+import imagebgdc from "./components/images/index"
 
 
 function Dashboard() {
@@ -108,7 +108,7 @@ function Dashboard() {
               <Weather></Weather>
             </Grid>
             <Grid item xs={20} lg={10} xl={7}>
-              <ResponsiveSpacing></ResponsiveSpacing>
+              <imagebgdc></imagebgdc>
             </Grid>
             
           </Grid>
