@@ -2,8 +2,8 @@
 
 // @mui material components
 import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
-import { Card, LinearProgress, Stack } from "@mui/material";
+import { Card, Icon } from "@mui/material";
+import {LinearProgress, Stack } from "@mui/material";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -35,6 +35,7 @@ import { IoBuild } from "react-icons/io5";
 import { IoWallet } from "react-icons/io5";
 import { IoDocumentText } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
+import NightsStayIcon from '@mui/icons-material/NightsStay';
 
 // Data
 import LineChart from "examples/Charts/LineCharts/LineChart";
@@ -47,6 +48,12 @@ import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions
 import React, { useState, useEffect } from 'react';
 
 import dataLoveday from '../../variables/dataLoveday'; 
+import WeatherComponent from "services/wherether/wherether";
+import TodayIcon from '@mui/icons-material/Today';
+import EventNoteIcon from '@mui/icons-material/EventNote';
+import HourglassFullIcon from '@mui/icons-material/HourglassFull';
+import Weather from "./components/wherether/index"
+import ResponsiveSpacing from "./components/images/index"
 
 
 function Dashboard() {
@@ -54,58 +61,61 @@ function Dashboard() {
   const { cardContent } = gradients;
   
   
-  return (
-    
+  return (  
     <DashboardLayout>
       <DashboardNavbar />
       <VuiBox py={3}>
         <VuiBox mb={3}>
           
           <Grid container spacing={3}>
+            
             <Grid item xs={12} md={6} xl={3}>
+            
               <MiniStatisticsCard 
                 title={{ text: "Year", fontWeight: "regular" }}
-                count={ <p style={{ fontSize: "2rem" }}>{dataLoveday().year} </p>  }
-                icon={{ color: "info", component: <IoWallet size="22px" color="white" /> }}
+                count={ <p style={{ fontSize: "3rem" }}>{dataLoveday().year} </p>  }
+                icon={{ color: "info", component: <HourglassFullIcon size="22px" color="#1CB0AE" /> }}
               />
-              
             </Grid>
             <Grid item xs={12} md={6} xl={3}>
               <MiniStatisticsCard
                 title={{ text: "Month"}}
-                count={ <p style={{ fontSize: "2rem" }}>{dataLoveday().month} </p>  }
-                icon={{ color: "info", component: <IoGlobe size="22px" color="white" /> }}
+                count={ <p style={{ fontSize: "3rem"}}>{dataLoveday().month} </p>  }
+                icon={{ color: "info", component: <EventNoteIcon size="22px" color="white" /> }}
               />
             </Grid>
             <Grid item xs={12} md={6} xl={3}>
               <MiniStatisticsCard
                 title={{ text: "Day"}}
-                count={ <p style={{ fontSize: "2rem" }}>{dataLoveday().day} </p>  }
-                icon={{ color: "info", component: <IoDocumentText size="22px" color="white" /> }}
+                count={ <p style={{ fontSize: "3rem"}}>{dataLoveday().day} </p>  }
+                icon={{ color: "info", component: <TodayIcon size="22px" color="white" /> }}
               />
             </Grid>
             <Grid item xs={12} md={6} xl={3}>
               <MiniStatisticsCard
-                title={{ text: "Total day" }}
-                count={ <p style={{ fontSize: "2rem" }}>{dataLoveday().totalDay} </p>  }
-                icon={{ color: "info", component: <FaShoppingCart size="20px" color="white" /> }
-              }
+                title={{ text: "Total day" , fontSize:"2rem"}}
+                count={ <p style={{ fontSize: "3rem" }}>{dataLoveday().totalDay} </p>  }
+                icon={{ color: "info", component: <NightsStayIcon size="20px" color="white" /> }}
+    
               />
             </Grid>
           </Grid>
         </VuiBox>
+
         <VuiBox mb={3}>
-          <Grid container spacing="30px">
-            <Grid item xs={10} lg={12} xl={12}>
-                <WelcomeMark />
+          <Grid container spacing="30px" >
+            <Grid item xs={20} lg={10} xl={5}>
+              <Weather></Weather>
             </Grid>
-            <Grid item xs={10} lg={12} xl={12}>
-                <ReferralTracking />
+            <Grid item xs={20} lg={10} xl={7}>
+              <ResponsiveSpacing></ResponsiveSpacing>
             </Grid>
             
           </Grid>
-          
         </VuiBox>
+        
+
+
         <VuiBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={6} xl={7}>

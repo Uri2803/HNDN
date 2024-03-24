@@ -10,12 +10,13 @@ import Icon from "@mui/material/Icon";
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import colors from "assets/theme/base/colors";
-
+import gif from "assets/images/abc5.jpeg";
 function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction }) {
   const { info } = colors;
 
   return (
-    <Card sx={{ padding: "20px" }}>
+    <Card sx={{ padding: "20px" ,  backgroundImage: `url(${gif})`,}}>
+
       <VuiBox>
         <VuiBox>
           <Grid container alignItems="center">
@@ -44,7 +45,7 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
                   opacity={bgColor === "white" ? 1 : 0.7}
                   textTransform="capitalize"
                 >
-                  {title.text}
+                 <p style={{ fontSize: "1.2rem"}}>{title.text} </p> 
                 </VuiTypography>
                 <VuiTypography  variant="subtitle1"  color="white" fontWeight="regular" > 
                   {count}{" "}
