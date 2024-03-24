@@ -107,10 +107,6 @@ function Dashboard() {
             <Grid item xs={20} lg={10} xl={5}>
               <Weather></Weather>
             </Grid>
-            <Grid item xs={20} lg={10} xl={7}>
-              <imagebgdc></imagebgdc>
-            </Grid>
-            
           </Grid>
         </VuiBox>
         

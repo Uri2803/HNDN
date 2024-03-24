@@ -7,7 +7,7 @@ const WeatherComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://api.weatherapi.com/v1/current.json?key=743e830025c54455a8e215629242003&q=Ho_Chi_Minh&aqi=yes');
+        const response = await fetch('https://api.weatherapi.com/v1/current.json?key=743e830025c54455a8e215629242003&q=Ho_Chi_Minh&aqi=yes');
         const data = await response.json();
         setWeatherData(data);
         setLoading(false);
