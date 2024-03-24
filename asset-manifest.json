@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/HNDN/static/css/main.a3625b32.css",
-    "main.js": "/HNDN/static/js/main.85129690.js",
+    "main.js": "/HNDN/static/js/main.6ec30ce6.js",
     "static/media/signUpImage.png": "/HNDN/static/media/signUpImage.c40a27bbff0e613ecf60.png",
     "static/media/signInImage.png": "/HNDN/static/media/signInImage.127192f68887f98e12aa.png",
     "static/media/body-background.png": "/HNDN/static/media/body-background.9e7d96f6af5373ca1771.png",
@@ -32,10 +32,10 @@
     "static/media/green-lightning.svg": "/HNDN/static/media/green-lightning.c20f110b7b466ab0409ebe815ace4c95.svg",
     "static/media/white-lightning.svg": "/HNDN/static/media/white-lightning.4b30144a95d73615625d82776f129a8f.svg",
     "main.a3625b32.css.map": "/HNDN/static/css/main.a3625b32.css.map",
-    "main.85129690.js.map": "/HNDN/static/js/main.85129690.js.map"
+    "main.6ec30ce6.js.map": "/HNDN/static/js/main.6ec30ce6.js.map"
   },
   "entrypoints": [
     "static/css/main.a3625b32.css",
-    "static/js/main.85129690.js"
+    "static/js/main.6ec30ce6.js"
   ]
 }
