@@ -86,7 +86,7 @@ function SidenavCard({ color, ...rest }) {
             })}
             fullWidth
           >
-            DOCUMENTATION
+            DOCUMENTATIOn
           </VuiButton>
         </VuiBox>
       </CardContent>

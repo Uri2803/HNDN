@@ -60,6 +60,7 @@ function Dashboard() {
       <DashboardNavbar />
       <VuiBox py={3}>
         <VuiBox mb={3}>
+          
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} xl={3}>
               <MiniStatisticsCard 
@@ -94,18 +95,16 @@ function Dashboard() {
           </Grid>
         </VuiBox>
         <VuiBox mb={3}>
-          <Grid container spacing="18px">
-            <Grid item xs={12} lg={12} xl={5}>
-              <WelcomeMark />
-              
+          <Grid container spacing="30px">
+            <Grid item xs={10} lg={12} xl={12}>
+                <WelcomeMark />
             </Grid>
-            <Grid item xs={12} lg={6} xl={3}>
-              <SatisfactionRate />
+            <Grid item xs={10} lg={12} xl={12}>
+                <ReferralTracking />
             </Grid>
-            <Grid item xs={12} lg={6} xl={4}>
-              <ReferralTracking />
-            </Grid>
+            
           </Grid>
+          
         </VuiBox>
         <VuiBox mb={3}>
           <Grid container spacing={3}>
